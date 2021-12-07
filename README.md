@@ -13,3 +13,6 @@ We will understand complex image based tasks!
 * [Learning transferable visual models from natural language supervision](https://arxiv.org/abs/2103.00020)
 * [Swin Transformer: Hierarchical Vision Transformer using ShiftedWindows](https://arxiv.org/abs/2103.14030)
 * [End-to-End Semi-Supervised Object Detection with Soft Teacher](https://arxiv.org/abs/2106.09018)
+
+### Blogs:
+* [mask-r-cnn](https://viso.ai/deep-learning/mask-r-cnn/)
