@@ -16,3 +16,4 @@ We will understand complex image based tasks!
 
 ### Blogs:
 * [mask-r-cnn](https://viso.ai/deep-learning/mask-r-cnn/)
+* [a-simple-guide-to-the-versions-of-the-inception-network](https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202)
