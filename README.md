@@ -4,6 +4,22 @@ We will understand complex image based tasks!
 
 ## Instance Segmentation:
 
+### 1) MaskRCNN : 
+Mask R-CNN first employs an object detector Faster R-CNN to predict a bounding-box for each instance. Then for each instance, regions-of-interest (ROIs) are cropped from the networks' feature maps using the ROIAlign operation. To predict the final masks for each instance, a compact fully convolutional network (FCN) (i.e., mask head) is applied to these ROIs to perform foreground/background segmentation.
+### 2) PANet :
+### 3) TensorMask :
+### 4) SOLO :
+### 5) Decoupled SOLO :
+### 6) SOLOV2 :
+### 7) SOLQ :
+### 8) CondInst :
+### 9) KNet :
+### 10) Cascade Mask R-CNN :
+### 11) QueryInst :
+### 12) HTC :
+### 13) CBNet :
+### 14) CBNetv2 :
+
 ### Youtube Playlist:
 * [Mask-RCNN](https://www.youtube.com/watch?v=Ul25zSysk2A&list=PLkRkKTC6HZMxZrxnHUDYSLiPZxiUUFD2C)
 * [Instance and panoptic segmentation](https://www.youtube.com/watch?v=LMZI8DDyltQ)
