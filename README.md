@@ -19,6 +19,7 @@ Mask R-CNN first employs an object detector Faster R-CNN to predict a bounding-b
 ### 12) HTC :
 ### 13) CBNet :
 ### 14) CBNetv2 :
+### 15) DetectoRS :
 
 ### Youtube Playlist:
 * [Mask-RCNN](https://www.youtube.com/watch?v=Ul25zSysk2A&list=PLkRkKTC6HZMxZrxnHUDYSLiPZxiUUFD2C)
