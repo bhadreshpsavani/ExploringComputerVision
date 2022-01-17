@@ -1,10 +1,4 @@
 # Vision Transformers Researchpapers:
 
-### ViT:
-### Mobile-Former:
-### Conformer:
-### DSNet:
-### Local ViT:
-### CvT:
-### Shuffle Transformer:
-### Pale Transformers:
+### 1) ViT
+### 2) Transformer in Transformer
