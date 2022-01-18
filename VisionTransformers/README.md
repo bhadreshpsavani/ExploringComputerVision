@@ -12,11 +12,27 @@ interprets an **image as a sequence of patches** and process it by a standard Tr
 * requires pre-training on large datasets.
 * the simple tokenization of input images fails to model the important local structure such as edges and lines among neighboring pixels, leading to low training sample efficiency
 * the redundant attention backbone design of ViT leads to limited feature richness for fixed computation budgets and limited training samples
+* the backbone of ViT is not efficient as ResNets
 
 ### 2) T2T-ViT:
 Proposals:
-1) a layerwise Tokens-to-Token (T2T) transformation to progressively structurize the image to tokens by **recursively aggregating neighboring Tokens into one Token (Tokens-to-Token),** such that local structure represented by surrounding tokens can be modeled and tokens length can be reduced; 
-2) an **efficient backbone with a deep-narrow structure** for vision transformer motivated by CNN architecture design after empirical study.
+1) a layerwise Tokens-to-Token (T2T) transformation to progressively structurize the image to tokens by **recursively aggregating neighboring Tokens into one Token (Tokens-to-Token),** such that local structure represented by surrounding tokens can be modeled and tokens length can be reduced;
+
+    ![t2t_tokenization](/VisionTransformers/AN%20IMAGE%20IS%20WORTH%2016X16%20WORDS/T2T_ViT.png)
+
+    in each Token-to-Token (T2T) step, the tokens output by a transformer layer are reconstructed as an image (restructurization) which is then split into tokens with overlapping (soft split) and finally the surrounding tokens are aggregated together by flattening the split patches. Thus the local structure from surrounding patches is embedded into the tokens to be input into the next transformer layer.By conducting T2T iteratively, the local structure is aggregated into tokens and the length of tokens can be reduced by the aggregation process.
+
+
+2) an **efficient backbone with a deep-narrow structure** for vision transformer motivated by CNN architecture design after empirical study. The `deepnarrow` architecture design with fewer channels but more layers in ViT brings much better performance
+
+
+![t2t_architecture](/VisionTransformers/AN%20IMAGE%20IS%20WORTH%2016X16%20WORDS/T2T_architecture.png)
+
+#### Pros:
+* more lightweight than the vanilla ViT.
+* T2T-ViT can achieve higher performance than DeiT without CNN as teacher model
+
+#### 
 
 ### 3) Transformer in Transformer:
 
@@ -31,7 +47,7 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 
 ### 4) PVTv1 : Pyramid Transformers
 
-### 5) PVTv2
+### 5) PVTv2 
 
 ### 6) Swin Transformer:
 
@@ -43,3 +59,6 @@ Proposals: Improves TNT baselines by introducing two advanced designs:
 2) **convolutional stem** (convolutional stem for improving the patchify stem and stable training.)
 
 ![tnt_architecture](/VisionTransformers/AN%20IMAGE%20IS%20WORTH%2016X16%20WORDS/TnT_vs_PyramidTnT.png)
+
+### Note:
+* Above Architecture can support many other Downstream task because its Backbone Architecture.  
