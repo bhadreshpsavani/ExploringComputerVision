@@ -59,6 +59,7 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 
 
 ![pvt1_architecture](/VisionTransformers/resources/imgs/pvt1_architecture.png)
+![SRA](/VisionTransformers/resources/imgs/SRA.png)
 
 #### Pros:
 1) A Direct replacement of CNN backbone
@@ -66,7 +67,12 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 3) Support Object Detection, Semantic Segmentation and Instance Segmentation,
 4) always produces a global receptive field, which is more suitable for detection and segmentation.
 
-### 5) PVTv2 
+### 5) PVTv2:
+Adding three designs,
+1) overlapping patch embedding, 
+2) convolutional feedforward networks, and 
+3) linear complexity attention layers.
+![pvt2_improvement](/VisionTransformers/resources/imgs/pvt2_improvement.png)
 
 ### 6) Swin Transformer:
 
