@@ -1,6 +1,6 @@
 # Vision Transformers Researchpapers:
 
-### 1) ViT:
+## 1) ViT:
 interprets an **image as a sequence of patches** and process it by a standard Transformer encoder as used in NLP
 
 ![vit_architecture](/VisionTransformers/resources/imgs/vit_architecture.png)
@@ -16,7 +16,7 @@ interprets an **image as a sequence of patches** and process it by a standard Tr
 * yields lowresolution outputs
 * ViT is applicable to image classification, **it is challenging to directly adapt it to pixel-level dense predictions** such as object detection and segmentation, because (1) its output feature map is single-scale and low-resolution, and (2) its computational and memory costs are relatively high even for common input image sizes
 
-### 2) T2T-ViT:
+## 2) T2T-ViT:
 Proposals:
 1) a layerwise Tokens-to-Token (T2T) transformation to progressively structurize the image to tokens by **recursively aggregating neighboring Tokens into one Token (Tokens-to-Token),** such that local structure represented by surrounding tokens can be modeled and tokens length can be reduced;
 
@@ -35,7 +35,7 @@ Proposals:
 * T2T-ViT can achieve higher performance than DeiT without CNN as teacher model
 
 
-### 3) Transformer in Transformer:
+## 3) Transformer in Transformer:
 
 Regards the local patches (e.g., 16x16) as "visual sentences" and further divide them into smaller patches (e.g., 4x4) as "visual words". 
 
@@ -46,7 +46,7 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 #### features:
 * Captures more details of image
 
-### 4) PVTv1 : Pyramid Vision Transformers
+## 4) PVTv1 : Pyramid Vision Transformers
 
 #### Features:
 * Take finegrained image patches(4*4 pixels)
@@ -72,28 +72,28 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 * The position encoding in PVTv1 is fixed-size, which is inflexible for process images of arbitrary size.
 * When processing high-resolution input (e.g., shorter side being 800 pixels), the computational complexity is relatively large.
 
-### 6) Swin Transformer: 
+## 5) Swin Transformer: 
 replaces fixed size position embedding with relative position biases, and restricts self-attention within shifted windows
 
-### 7) CoaT: 
+## 6) CoaT: 
 introduce convolution-like operations into vision Transformers
 
-### 8) LeViT:
+## 7) LeViT:
 introduce convolution-like operations into vision Transformers
 
-### 9) Twins:
+## 8) Twins:
 combines local attention and global attention mechanisms to obtain stronger feature representation.
 
-### CPVT :
+## 9) CPVT :
 replaces the fixed size position embedding in ViT with conditional position encodings, making it easier to process images of arbitrary resolution.
 
-### CrossViT: 
+## 10) CrossViT: 
 processes image patches of different sizes via a dual-branch Transformer-
 
-### LocalViT:
+## 11) LocalViT:
 incorporates depth-wise convolution into vision Transformers to improve the local continuity of features.
 
-### 5) PVTv2:
+## 12) PVTv2:
 Adding three designs,
 1) overlapping patch embedding, 
 2) convolutional feedforward networks, and 
@@ -108,7 +108,7 @@ Adding three designs,
 2) process variable-resolution input more flexibly
 3) enjoy the same linear complexity as CNN.
 
-### 10) PyramidTNT:
+## 13) PyramidTNT:
 
 Proposals: Improves TNT baselines by introducing two advanced designs: 
 1) **pyramid architecture** (with gradual decreased resolution to extract multi-scale representation)
