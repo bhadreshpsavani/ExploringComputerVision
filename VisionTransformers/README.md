@@ -47,13 +47,24 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 * Captures more details of image
 
 ### 4) PVTv1 : Pyramid Vision Transformers
-1) A Direct replacement of CNN backbone
-2) Gives High Resolution output
-3) Support Object Detection, Semantic Segmentation and Instance Segmentation
+
+#### Features:
+* Take finegrained image patches(4*4 pixels)
+* Progressive reduction of Pyramid to reduce sequence length and computation cost
+* Introduce spatial reduction attention
 
 ![pvt1_overview](/VisionTransformers/resources/imgs/pv1_v1_overview.png)
 
-**Note: PVT can easily be combined with DETR to build an end-to-end object detection system without convolutions.**
+**Note: PVT can easily be combined with DETR to build an end-to-end object detection system without convolutions and Handcrafted components such as Dense Anchors and NMS**
+
+
+![pvt1_architecture](/VisionTransformers/resources/imgs/pvt1_architecture.png)
+
+#### Pros:
+1) A Direct replacement of CNN backbone
+2) Gives High Resolution output
+3) Support Object Detection, Semantic Segmentation and Instance Segmentation,
+4) always produces a global receptive field, which is more suitable for detection and segmentation.
 
 ### 5) PVTv2 
 

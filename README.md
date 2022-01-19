@@ -1,8 +1,16 @@
 # Advance Computer Vision
 
-We will understand complex image based tasks!
+Computer Vision Architecture can be basically of two type:
+1) Single Stage,
+2) Multistage
 
-## Instance Segmentation:
+Most of the Computer Vision Based Architectures has two parts:
+1) Backnone Network(For Feature Extraction from Image)
+2) Task Specific Head
+
+The recent research is basically focused on making better backbone or task specific head. 
+
+## Instance Segmentation: 
 
 ### 1) MaskRCNN : 
 Mask R-CNN first employs an object detector Faster R-CNN to predict a bounding-box for each instance. Then for each instance, regions-of-interest (ROIs) are cropped from the networks' feature maps using the ROIAlign operation. To predict the final masks for each instance, a compact fully convolutional network (FCN) (i.e., mask head) is applied to these ROIs to perform foreground/background segmentation.
@@ -21,7 +29,9 @@ Mask R-CNN first employs an object detector Faster R-CNN to predict a bounding-b
 ### 14) CBNetv2 :
 ### 15) DetectoRS :
 
-## Object Detection
+## Object Detection:
+1) Single Stage Detectors: SSD, RetinaNet, FCOS, GFL, PolarMask and OneNet,
+2) Multistage Detectors: Faster R-CNN, Mask R-CNN, Cascade R-CNN, Sparse R-CNN, DETR and deformable DETR
 
 ## Semantic Segmentation
 
