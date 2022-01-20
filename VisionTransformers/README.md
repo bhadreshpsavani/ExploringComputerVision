@@ -80,19 +80,21 @@ by starting from **small-sized patches (outlined in
 gray) and gradually merging neighboring patches** in deeper
 Transformer layers.
 
-![SRA](/VisionTransformers/resources/imgs/SWIM_Trans_Architecture.png)
+![SWIN_architecture](/VisionTransformers/resources/imgs/SWIM_Trans_Architecture.png)
 
 
 #### How it makes self Attention Linear?
 Self attention is applied on fixed sized patchess of local window. Local window will always have same size. Basically this local window makes it linear based on number of patches in local window and image dimention.
 
 #### How it makes it more efficieny?
-![SRA](/VisionTransformers/resources/imgs/shifted_window.png)
+![shifted_window](/VisionTransformers/resources/imgs/shifted_window.png)
+
 Using Shifted Window Attention Mechanism. When self attention is applied on bunch of pixel of the local window in the next transformer block the local window is shifted by half of the local window size so focus on different set of pixels
 
 It tried to **combine adjust set of pixels using self attention layer**. Basically captures more details that makes it more efficient 
 
-![SRA](/VisionTransformers/resources/imgs/two_swmsa.png)
+![two_swin_blocks](/VisionTransformers/resources/imgs/two_swmsa.png)
+
 This shows two consecutive transformer blocks. Second one is with shifted window
 
 #### Pros:
