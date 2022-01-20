@@ -99,6 +99,7 @@ This shows two consecutive transformer blocks. Second one is with shifted window
 
 #### Pros:
 * Linear Computation Complexity of Self Attention
+* captures more details and gives better perfromance
 
 ## 6) CoaT: 
 introduce convolution-like operations into vision Transformers
