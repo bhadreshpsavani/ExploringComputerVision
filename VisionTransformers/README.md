@@ -84,7 +84,7 @@ Transformer layers.
 
 
 #### How it makes self Attention Linear?
-Self attention is applied on fixed sized patchess of local window. Local window will always have same size. Basically this local window makes it linear based on patch size and image dimention.
+Self attention is applied on fixed sized patchess of local window. Local window will always have same size. Basically this local window makes it linear based on number of patches in local window and image dimention.
 
 #### How it makes it more efficieny?
 ![SRA](/VisionTransformers/resources/imgs/shifted_window.png)
