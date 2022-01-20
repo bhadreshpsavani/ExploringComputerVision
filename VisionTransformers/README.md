@@ -75,6 +75,14 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 ## 5) Swin Transformer: 
 replaces fixed size position embedding with relative position biases, and restricts self-attention within shifted windows
 
+Swin Transformer constructs a hierarchical representation
+by starting from **small-sized patches (outlined in
+gray) and gradually merging neighboring patches** in deeper
+Transformer layers.
+
+#### Pros:
+* Linear Computation Complexity of Self Attention
+
 ## 6) CoaT: 
 introduce convolution-like operations into vision Transformers
 
