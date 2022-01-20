@@ -88,10 +88,12 @@ Self attention is applied on fixed sized patchess of local window. Local window 
 
 #### How it makes it more efficieny?
 ![SRA](/VisionTransformers/resources/imgs/shifted_window.png)
+Using Shifted Window Attention Mechanism. When self attention is applied on bunch of pixel of the local window in the next transformer block the local window is shifted by half of the local window size so focus on different set of pixels
+
+It tried to **combine adjust set of pixels using self attention layer**. Basically captures more details that makes it more efficient 
 
 ![SRA](/VisionTransformers/resources/imgs/two_swmsa.png)
-
-Using Shifted Window Attention Mechanism. When self attention is applied on bunch of pixel of the local window in the next transformer block the local window is shifted by half of the local window size so focus on different set of pixels
+This shows two consecutive transformer blocks. Second one is with shifted window
 
 #### Pros:
 * Linear Computation Complexity of Self Attention
