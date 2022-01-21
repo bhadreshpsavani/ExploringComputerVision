@@ -7,6 +7,7 @@ interprets an **image as a sequence of patches** and process it by a standard Tr
 
 #### features:
 * First Model to use standard transformer for computer vision
+* In CNNs, the final embedding is usually obtained by averaging the features over all spatial locations while ViT uses the CLS that interacts with patch tokens at every transformer encoder as the final embedding.
 
 #### Cons:
 * requires pre-training on large datasets.
@@ -115,6 +116,25 @@ replaces the fixed size position embedding in ViT with conditional position enco
 
 ## 10) CrossViT: 
 processes image patches of different sizes via a dual-branch Transformer-
+
+processes small-patch and large-patch tokens with two separate branches of different computational complexity and these tokens are then fused purely by attention multiple times to complement each other.
+
+![crossvit](/VisionTransformers/resources/imgs/CrossViT_Architecture.png)
+
+model is primarily composed of K multiscale transformer encoders where each encoder consists of two branches: 
+
+1) L-Branch: a large (primary) branch that utilizes coarse-grained patch size (Pl) with more transformer encoders and wider embedding dimensions, 
+2) S-Branch: a small (complementary) branch that operates at fine-grained patch size (Ps) with fewer encoders and smaller embedding dimensions.
+
+![crossvit](/VisionTransformers/resources/imgs/cross_attention.png) 
+
+utilize the CLS token at each branch as an agent to exchange information among the patch tokens from the other branch and then back project it to its own branch.
+
+#### Pros:
+* Linear Complexity
+
+#### Cons:
+* Mainly Build for image classification
 
 ## 11) LocalViT:
 incorporates depth-wise convolution into vision Transformers to improve the local continuity of features.
