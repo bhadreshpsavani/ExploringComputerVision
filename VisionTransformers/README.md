@@ -114,7 +114,13 @@ combines local attention and global attention mechanisms to obtain stronger feat
 ## 9) CPVT :
 replaces the fixed size position embedding in ViT with conditional position encodings, making it easier to process images of arbitrary resolution.
 
+![cpvt](/VisionTransformers/resources/imgs/CPVT.png)
+
 CPE is dynamically generated and conditioned on the local neighborhood of the input tokens
+
+#### Pros:
+* prevents the model from handling the sequences longer than the longest training sequences
+* makes the model not translationinvariant
 
 ## 10) CrossViT: 
 processes image patches of different sizes via a dual-branch Transformer-
@@ -128,7 +134,7 @@ model is primarily composed of K multiscale transformer encoders where each enco
 1) L-Branch: a large (primary) branch that utilizes coarse-grained patch size (Pl) with more transformer encoders and wider embedding dimensions, 
 2) S-Branch: a small (complementary) branch that operates at fine-grained patch size (Ps) with fewer encoders and smaller embedding dimensions.
 
-![crossvit](/VisionTransformers/resources/imgs/cross_attention.png) 
+![cross_attention](/VisionTransformers/resources/imgs/cross_attention.png) 
 
 utilize the CLS token at each branch as an agent to exchange information among the patch tokens from the other branch and then back project it to its own branch.
 
