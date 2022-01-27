@@ -114,6 +114,8 @@ combines local attention and global attention mechanisms to obtain stronger feat
 ## 9) CPVT :
 replaces the fixed size position embedding in ViT with conditional position encodings, making it easier to process images of arbitrary resolution.
 
+CPE is dynamically generated and conditioned on the local neighborhood of the input tokens
+
 ## 10) CrossViT: 
 processes image patches of different sizes via a dual-branch Transformer-
 
@@ -138,6 +140,12 @@ utilize the CLS token at each branch as an agent to exchange information among t
 
 ## 11) LocalViT:
 incorporates depth-wise convolution into vision Transformers to improve the local continuity of features.
+
+It tried to improve FFL of Transformer by replacing with Depthwise convolution and inverted residuals blocks. They claim it helps network to better capture Local Information. 
+
+![LocalVit](/VisionTransformers/resources/imgs/locaVIT.png) 
+
+Note: I didn't gone through it indepth since i thought this paper introduce one simple concept. Lots of experimentation is mention about the choices and expasion ratio in the paper.
 
 ## 12) PVTv2:
 Adding three designs,
@@ -165,3 +173,6 @@ Proposals: Improves TNT baselines by introducing two advanced designs:
 
 ### Note:
 * Above Architecture can support many other Downstream task because its Backbone Architecture.  
+
+General Notes:
+**All the information mentioned above is analysed from the official researchpapers**
