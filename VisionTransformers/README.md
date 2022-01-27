@@ -105,6 +105,12 @@ This shows two consecutive transformer blocks. Second one is with shifted window
 ## 6) CoaT: 
 introduce convolution-like operations into vision Transformers
 
+a Transformer-based image classifier equipped with **co-scale** and **conv-attentional mechanisms**.
+
+**co-scale**: maintains the integrity of Transformers’ encoder branches at individual scales, while allowing representations learned at different scales to effectively communicate with each other
+
+**conv-attentional mechanisms**: we devise a conv-attentional mechanism by realizing a relative position embedding formulation in the factorized attention module with an efficient convolution-like implementation.
+
 ## 7) LeViT:
 introduce convolution-like operations into vision Transformers
 
