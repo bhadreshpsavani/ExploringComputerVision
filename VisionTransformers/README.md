@@ -1,5 +1,11 @@
 # Vision Transformers Researchpapers:
 
+in CNNs, the weights are learned during training but **fixed during testing**; in the self-attention mechanism, the weights are **dynamically computed** based on the similarity or affinity between every pair of tokens
+
+The self-attention operation computes an affinity/similarity that is more computationally demanding than linear filtering in convolution
+
+Lets Go through Vision Transformer based Architectures
+
 ## 1) ViT:
 interprets an **image as a sequence of patches** and process it by a standard Transformer encoder as used in NLP
 
@@ -107,7 +113,11 @@ introduce convolution-like operations into vision Transformers
 
 a Transformer-based image classifier equipped with **co-scale** and **conv-attentional mechanisms**.
 
-**co-scale**: maintains the integrity of Transformers’ encoder branches at individual scales, while allowing representations learned at different scales to effectively communicate with each other
+![CoAT Architecture](/VisionTransformers/resources/imgs/CoAT.png)
+
+**co-scale**: a series of highly modularized serial and parallel blocks to enable attention with fine-to-coarse, coarse-to-fine, and cross-scale information on tokenized representations.
+
+![CoAT Attention](/VisionTransformers/resources/imgs/COAT_Attention.png)
 
 **conv-attentional mechanisms**: we devise a conv-attentional mechanism by realizing a relative position embedding formulation in the factorized attention module with an efficient convolution-like implementation.
 
