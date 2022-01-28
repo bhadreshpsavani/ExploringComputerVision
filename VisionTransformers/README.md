@@ -123,9 +123,7 @@ a Transformer-based image classifier equipped with **co-scale** and **conv-atten
 
 ## 7) LeViT:
 replace the uniform structure of a Transformer by a **pyramid with pooling**, similar to the LeNet [11] architecture. Hence we call it LeViT
-
-
-
+ 
 introduce convolution-like operations into vision Transformers
 
 introduce the **attention bias**, a new way to integrate positional information in vision transformers
