@@ -122,7 +122,16 @@ a Transformer-based image classifier equipped with **co-scale** and **conv-atten
 **conv-attentional mechanisms**: we devise a conv-attentional mechanism by realizing a relative position embedding formulation in the factorized attention module with an efficient convolution-like implementation.
 
 ## 7) LeViT:
+replace the uniform structure of a Transformer by a **pyramid with pooling**, similar to the LeNet [11] architecture. Hence we call it LeViT
+
+
+
 introduce convolution-like operations into vision Transformers
+
+introduce the **attention bias**, a new way to integrate positional information in vision transformers
+
+#### Pros:
+* fast inference image classification
 
 ## 8) Twins:
 combines local attention and global attention mechanisms to obtain stronger feature representation.
