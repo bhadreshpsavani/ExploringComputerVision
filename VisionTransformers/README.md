@@ -78,6 +78,7 @@ Inside the TnT Block The inner transformer block is used to model the relationsh
 * treats an image as a sequence of non-overlapping patches,which loses the local continuity of the image to a certain extent
 * The position encoding in PVTv1 is fixed-size, which is inflexible for process images of arbitrary size.
 * When processing high-resolution input (e.g., shorter side being 800 pixels), the computational complexity is relatively large.
+* each query computes the attention weights with all the input tokens, in PVT, each query only computes the attention with a sub-sampled version of the input tokens. Although its computational complexity in theory is still quadratic
 
 ## 5) Swin Transformer: 
 replaces fixed size position embedding with relative position biases, and restricts self-attention within shifted windows
@@ -88,7 +89,6 @@ gray) and gradually merging neighboring patches** in deeper
 Transformer layers.
 
 ![SWIN_architecture](/VisionTransformers/resources/imgs/SWIM_Trans_Architecture.png)
-
 
 #### How it makes self Attention Linear?
 Self attention is applied on fixed sized patchess of local window. Local window will always have same size. Basically this local window makes it linear based on number of patches in local window and image dimention.
@@ -107,6 +107,9 @@ This shows two consecutive transformer blocks. Second one is with shifted window
 #### Pros:
 * Linear Computation Complexity of Self Attention
 * captures more details and gives better perfromance
+
+#### Cons:
+* The shifted windows may have uneven sizes, The uneven windows result in difficulties when the models are deployed with ONNX or TensorRT
 
 ## 6) CoaT: 
 introduce convolution-like operations into vision Transformers
@@ -133,6 +136,15 @@ introduce the **attention bias**, a new way to integrate positional information 
 
 ## 8) Twins:
 combines local attention and global attention mechanisms to obtain stronger feature representation.
+
+It has spatially separable self-attention (SSSA) which consist of,
+1. locally-grouped self-attention (LSA), Captures Local/short Distance Information
+2. global sub-sampled attention (GSA), Captures Global/Long Distance Information
+
+
+
+#### Pros:
+* proposed architectures are highly efficient and easy to implement, only involving matrix multiplications that are highly optimized in modern deep learning frameworks
 
 ## 9) CPVT :
 replaces the fixed size position embedding in ViT with conditional position encodings, making it easier to process images of arbitrary resolution.
