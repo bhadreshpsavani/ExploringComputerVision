@@ -212,8 +212,26 @@ Proposals: Improves TNT baselines by introducing two advanced designs:
 
 ![tnt_architecture](/VisionTransformers/resources/imgs/TnT_vs_PyramidTnT.png)
 
-### Note:
-* Above Architecture can support many other Downstream task because its Backbone Architecture.  
+
+## 14) ShiftViT:
+
+hints that **the attention mechanism might not be the vital** that makes ViT works
+
+propose to replace the attention layer with a **simple shift operation** in vision transformers. It spatially shifts a small portion of the channels along four directions, and the rest of the channels remain unchanged.
+
+![ShiftViT](/VisionTransformers/resources/imgs/ShiftViT.png)
+
+the proposed building block will first shift a small portion of the channels along four spatial directions, namely **left, right, top, and down**.  After shifting, the
+out-of-scope pixels are simply dropped and the vacant pixels
+are zero padded. In this work, the shift step is set to 1 pixel
+
+As such, the information of neighboring features is explicitly mingled by the shifted channels. Then, the subsequent FFN performs **channel-wise mixing to further fuse the information** from neighbors.
+
+ShiftViT can be also categorized into the pure **MLP architecture**, where the shift operation is viewed as a special token-mixing layer
+
+
+# Note:
+* All of the Above Architecture can support many other Downstream task because its Backbone Architecture.  
 
 General Notes:
 **All the information mentioned above is analysed from the official researchpapers**
