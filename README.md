@@ -3,6 +3,7 @@
 | Submitted | Paper | Revised |
 | --- | --- | --- |
 |  26 Jan 2022 | [When Shift Operation Meets Vision Transformer: An Extremely Simple Alternative to Attention Mechanism](https://arxiv.org/abs/2201.10801) | |
+| 24 Jan 2022 | [Patches Are All You Need?](https://arxiv.org/abs/2201.09792) | |
 | 4 Jan 2022 | [PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture](https://arxiv.org/abs/2201.00978)| |
 |  25 Jun 2021 | [PVTv2: Improved Baselines with Pyramid Vision Transformer](https://arxiv.org/abs/2106.13797) | 17 Jul 2021 |
 |  28 Apr 2021 | [Twins: Revisiting the Design of Spatial Attention in Vision Transformers](https://arxiv.org/abs/2104.13840) | 30 Sep 2021 |
