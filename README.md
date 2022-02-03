@@ -21,3 +21,6 @@ In below table Performance of Model is with COCO Benchmark with Mask RCNN
 
 ## Resources:
 * [Transformer-in-Vision-Researchpaper-Collections](https://github.com/DirtyHarryLYL/Transformer-in-Vision)
+
+## Libraries:
+[A python library built to empower developers to build applications and systems with self-contained Computer Vision capabilities](https://github.com/OlafenwaMoses/ImageAI/)
