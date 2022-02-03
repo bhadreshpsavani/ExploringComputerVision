@@ -225,9 +225,14 @@ the proposed building block will first shift a small portion of the channels alo
 out-of-scope pixels are simply dropped and the vacant pixels
 are zero padded. In this work, the shift step is set to 1 pixel
 
+![shift_opera](/VisionTransformers/resources/imgs/shift_oper.png)
+In above images second image is after shift operation
+
 As such, the information of neighboring features is explicitly mingled by the shifted channels. Then, the subsequent FFN performs **channel-wise mixing to further fuse the information** from neighbors.
 
 ShiftViT can be also categorized into the pure **MLP architecture**, where the shift operation is viewed as a special token-mixing layer
+
+[ShiftOperation](https://github.com/bhadreshpsavani/ExploringComputerVision/blob/main/notebook/Understanding_Shift_Operation.ipynb)
 
 
 # Note:
