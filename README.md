@@ -23,5 +23,5 @@ In below table Performance of Model is with COCO Benchmark with Mask RCNN
 * [Transformer-in-Vision-Researchpaper-Collections](https://github.com/DirtyHarryLYL/Transformer-in-Vision)
 
 ## Libraries:
-[A python library built to empower developers to build applications and systems with self-contained Computer Vision capabilities](https://github.com/OlafenwaMoses/ImageAI/)
-[10-minutes-to-building-a-binary-image-classifier-by-applying-transfer-learning-to-mobilenet](https://towardsdatascience.com/10-minutes-to-building-a-binary-image-classifier-by-applying-transfer-learning-to-mobilenet-eab5a8719525)
+* [A python library built to empower developers to build applications and systems with self-contained Computer Vision capabilities](https://github.com/OlafenwaMoses/ImageAI/)
+* [10-minutes-to-building-a-binary-image-classifier-by-applying-transfer-learning-to-mobilenet](https://towardsdatascience.com/10-minutes-to-building-a-binary-image-classifier-by-applying-transfer-learning-to-mobilenet-eab5a8719525)
